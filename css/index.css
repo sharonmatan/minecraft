@@ -1,0 +1,29 @@
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+.backGame{
+    background-color: #87CEFA;
+    height: 100vh;
+    width: 70vw;
+    display: flex;
+    align-items: flex-end;
+}
+.toolsMenu{
+height: 100vh;
+width: 15vw;
+background-color: blue;
+}
+.elementBank{
+height: 100vh;
+width: 15vw;
+background-color: blue;
+
+}
+.dert{
+    background-image: url(../image/dert.jpg);
+    background-size: contain;
+    height: 10%;
+    width: 10%;
+}
