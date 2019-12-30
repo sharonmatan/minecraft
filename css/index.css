@@ -9,6 +9,7 @@
     width: 70vw;
     display: flex;
     align-items: flex-end;
+    flex-wrap: wrap;
 }
 .toolsMenu{
 height: 100vh;
@@ -24,6 +25,22 @@ background-color: blue;
 .dert{
     background-image: url(../image/dert.jpg);
     background-size: contain;
+    height: 100%;
+    width: 100%;
+}
+.fullscreen{
     height: 10%;
     width: 10%;
+}
+.tree{
+    background-image: url(../image/tree.jpg);
+    background-size: contain;
+    height: 100%;
+    width: 100%;
+}
+.trunk{
+    background-image: url(../image/trunk.jpg);
+    background-size: contain;
+    height: 100%;
+    width: 100%;
 }
