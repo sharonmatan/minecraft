@@ -70,12 +70,13 @@
 }
 
 #axe {
-  cursor: url("../image/axe.png"), auto;
+  cursor: url("../image/axe1.png"), auto;
 }
 
 #pickaxe {
   cursor: url("../image/pickaxe.png"), auto;
 }
+
 
 #shovel {
   cursor: url("../image/shovel.png"), auto;
