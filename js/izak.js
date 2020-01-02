@@ -4,12 +4,16 @@ bank.tree = 0
 bank.trunk = 0
 bank.selected = ""
 bank.deploy = function(e) {
-    if (bank.selected == "bankDert") {
+    if (bank.selected == "bankDert" && bank.dert > 0) {
         makeMaterial(e.target, 'dert', 'dert', 'shovelId')
-    } else if (bank.selected == "bankTrunk") {
+        bank.dert--
+    } else if (bank.selected == "bankTrunk" && bank.trunk > 0) {
         makeMaterial(e.target, 'trunk', 'trunk', 'axeId')
-    } else if (bank.selected == "bankTree") {
+        bank.trunk--
+    } else
+    if (bank.selected == "bankTree" && bank.tree > 0) {
         makeMaterial(e.target, 'tree', 'tree', 'pickaxeId')
+        bank.tree--
     }
 
 }
