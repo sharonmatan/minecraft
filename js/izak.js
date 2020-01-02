@@ -2,28 +2,35 @@ let bank = {}
 bank.dert = 0
 bank.tree = 0
 bank.trunk = 0
-// bank.deploy = function(){
-// e.taget.
-// }
+bank.deploy = function(e){
+    let material = e.target.classList.value
+    if(material == "bankDert"){
+        makeMaterial(e.target,'dert','dert','shovelId')
+    }
+
+}
 
 const saveRemove = (e) => {
-    e.target.style.display = "none";
+    if (tool == e.target.id) {
+        e.target.style.display = "none";
+    }
 }
-const moveToBank=(e)=>{
+const moveToBank = (e) => {
     let element = e.target.classList.value
-    if(element === "dert"){
+    if (element === "dert") {
         bank.dert++
     }
-    else if(element === "tree"){
+    else if (element === "tree") {
         bank.tree++
     }
-   else if(element === "trunk"){
+    else if (element === "trunk") {
         bank.trunk++
     }
 }
-let makeDert=(element,material,mClass)=>{
+let makeMaterial = (element, material, mClass,tool) => {
     var material = document.createElement("div");
-    material.addEventListener("click",  (e)=>{saveRemove(e); moveToBank(e)})
+    material.addEventListener("click", (e) => { saveRemove(e); moveToBank(e) })
+    material.setAttribute("id",tool)
     material.classList.add(mClass);
-        element.appendChild(material)
+    element.appendChild(material)
 }
