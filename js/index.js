@@ -17,14 +17,17 @@ for (var i = 0; i < 20; i++) {
 }
 
 fullScreen = document.querySelectorAll('.fullscreen');
+let trunck1Place = Math.floor(Math.random() * (248 - 241 + 1)) + 241;
+let trunck2Place = Math.floor(Math.random() * (258 - 251 + 1)) + 250;
+
 fullScreen.forEach(element => {
     if (element.id > 279) {
-        makeMaterial(element,'dert',"dert","shovelId")
+        makeMaterial(element,'dert',"dert","shovelId");
     }
-    else if (element.id == 277 || element.id == 267 || element.id == 227 || element.id == 237 || element.id == 247 || element.id == 257) {
+    else if ((element.id == trunck1Place || element.id == (trunck1Place+20) || element.id == (trunck1Place+40)) || (element.id == trunck2Place || element.id == (trunck2Place+20) || element.id == (trunck2Place+40))) {
         makeMaterial(element,'trunk',"trunk","axeId")
     }
-    else if (element.id == 186 || element.id == 187 || element.id == 188 || element.id == 196 || element.id == 197 || element.id == 198 || element.id == 206 || element.id == 207 || element.id == 208 || element.id == 216 || element.id == 217 || element.id == 218) {
+    else if (element.id == (trunck1Place-20) || element.id == (trunck1Place-21) || element.id == (trunck1Place-19) || element.id == (trunck1Place-40) || element.id == (trunck1Place-39) || element.id == (trunck1Place-41) || element.id == (trunck2Place-19) || element.id == (trunck2Place-20) || element.id == (trunck2Place-21) || element.id == (trunck2Place-39) || element.id == (trunck2Place-40) || element.id == (trunck2Place-41)) {
         makeMaterial(element,'tree',"tree","pickaxeId")
         
     }
