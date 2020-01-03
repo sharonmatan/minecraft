@@ -26,16 +26,16 @@ fullScreen.forEach(element => {
     if (element.id > 279) {
         makeMaterial(element,'dert',"dert","shovelId");
     }
-    else if ((element.id == trunck1Place || element.id == (trunck1Place+20) || element.id == (trunck1Place+40)) || (element.id == trunck2Place || element.id == (trunck2Place+20) || element.id == (trunck2Place+40))) {
+    else if ((element.id == trunck1Place || element.id == (trunck1Place+20) || element.id == (trunck1Place-20)) || (element.id == trunck2Place || element.id == (trunck2Place+20) || element.id == (trunck2Place-20) || element.id == (trunck2Place-40) || element.id == (trunck2Place-60))) {
         makeMaterial(element,'trunk',"trunk","axeId")
     }
-    else if (element.id == (trunck1Place-20) || element.id == (trunck1Place-21) || element.id == (trunck1Place-19) || element.id == (trunck1Place-40) || element.id == (trunck1Place-39) || element.id == (trunck1Place-41) || element.id == (trunck2Place-19) || element.id == (trunck2Place-20) || element.id == (trunck2Place-21) || element.id == (trunck2Place-39) || element.id == (trunck2Place-40) || element.id == (trunck2Place-41)) {
+    else if (element.id == (trunck1Place-61) || element.id == (trunck1Place-60) || element.id == (trunck1Place-59) || element.id == (trunck1Place-40) || element.id == (trunck1Place-39) || element.id == (trunck1Place-41) || element.id == (trunck2Place-79) || element.id == (trunck2Place-80) || element.id == (trunck2Place-81) || element.id == (trunck2Place-99) || element.id == (trunck2Place-100) || element.id == (trunck2Place-101)) {
         makeMaterial(element,'tree',"tree","pickaxeId")
     }
     else if (element.id == (trunck3Place-200)) {
         makeMaterial(element,'cloud',"cloud")
     }
-    else if (element.id == (trunck4Place-200)){
+    else if (element.id == (trunck4Place-180)){
         makeMaterial(element,'cloud',"cloud")   
     }
 });
