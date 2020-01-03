@@ -18,7 +18,11 @@ for (var i = 0; i < 20; i++) {
 
 fullScreen = document.querySelectorAll('.fullscreen');
 let trunck1Place = Math.floor(Math.random() * (248 - 241 + 1)) + 241;
-let trunck2Place = Math.floor(Math.random() * (258 - 251 + 1)) + 250;
+let trunck2Place = Math.floor(Math.random() * (258 - 251 + 1)) + 251;
+let trunck3Place = Math.floor(Math.random() * (248 - 241 + 1)) + 241;
+let trunck4Place = Math.floor(Math.random() * (258 - 252 + 1)) + 251;
+
+
 
 fullScreen.forEach(element => {
     if (element.id > 279) {
@@ -29,6 +33,11 @@ fullScreen.forEach(element => {
     }
     else if (element.id == (trunck1Place-20) || element.id == (trunck1Place-21) || element.id == (trunck1Place-19) || element.id == (trunck1Place-40) || element.id == (trunck1Place-39) || element.id == (trunck1Place-41) || element.id == (trunck2Place-19) || element.id == (trunck2Place-20) || element.id == (trunck2Place-21) || element.id == (trunck2Place-39) || element.id == (trunck2Place-40) || element.id == (trunck2Place-41)) {
         makeMaterial(element,'tree',"tree","pickaxeId")
-        
+    }
+    else if (element.id == (trunck3Place-200)) {
+        makeMaterial(element,'cloud',"cloud")
+    }
+    else if (element.id == (trunck4Place-200)){
+        makeMaterial(element,'cloud',"cloud")   
     }
 });

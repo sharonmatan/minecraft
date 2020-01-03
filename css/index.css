@@ -48,6 +48,15 @@
   height: 100%;
   width: 100%;
 }
+
+.cloud {
+  background-image: url(../image/cloud.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 500%;
+  width: 300%;
+}
+
 .elementBank {
   height: 100vh;
   width: 15vw;
@@ -76,7 +85,6 @@
 #pickaxe {
   cursor: url("../image/pickaxe.png"), auto;
 }
-
 
 #shovel {
   cursor: url("../image/shovel.png"), auto;
