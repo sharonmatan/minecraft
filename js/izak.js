@@ -32,11 +32,11 @@ const saveRemove = (e) => {
 }
 const moveToBank = (e) => {
     let element = e.target.classList.value
-    if (element === "dert") {
+    if (element === "dert" && tool === "shovelId") {
         bank.dert++
-    } else if (element === "tree") {
+    } else if (element === "tree" && tool === "pickaxeId") {
         bank.tree++
-    } else if (element === "trunk") {
+    } else if (element === "trunk" && tool === "axeId") {
         bank.trunk++
     }
 }
