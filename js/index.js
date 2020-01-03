@@ -1,6 +1,4 @@
-
 const backGame = document.querySelector(".backGame");
-// backGame.appendChild(dert)
 const matrix = [];
 let k = 0
 for (var i = 0; i < 20; i++) {
