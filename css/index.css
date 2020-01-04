@@ -108,11 +108,11 @@ body {
 }
 
 #pickaxe {
-    cursor: url("../image/pickaxe.png"), auto;
+    cursor: url("../image/prunersmall.png"), auto;
 }
 
 #shovel {
-    cursor: url("../image/shovel.png"), auto;
+    cursor: url("../image/shovelsmall.png"), auto;
 }
 
 #bankDert {
