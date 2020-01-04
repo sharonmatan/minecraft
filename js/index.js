@@ -15,7 +15,7 @@ for (var i = 0; i < 20; i++) {
 }
 
 fullScreen = document.querySelectorAll('.fullscreen');
-let trunck1Place = Math.floor(Math.random() * (248 - 241 + 1)) + 241;
+let trunck1Place = Math.floor(Math.random() * (258 - 241 + 1)) + 241;
 let trunck2Place = Math.floor(Math.random() * (258 - 251 + 1)) + 251;
 let trunck3Place = Math.floor(Math.random() * (248 - 241 + 1)) + 241;
 let trunck4Place = Math.floor(Math.random() * (258 - 252 + 1)) + 251;
@@ -36,7 +36,7 @@ for (let i = 1; i < 81; i++) {
 let g = 1
 const sort = (num) => {
     fullScreen.forEach(element => {
-        if (element.id > 319 || 299 < element.id && element.id < 320 || element.id == 294 - num || element.id == 295 - num || element.id == 275 - num) {
+        if (element.id > 319 || 299 < element.id && element.id < 320 || element.id == 294 - num || element.id == 295 - num || element.id == 275 - num || element.id == 315 - num || element.id == 314 - num) {
             makeMaterial(element, 'dert', "dert", "shovelId");
         } else if ((element.id == trunck1Place - num || element.id == (trunck1Place - num + 20) || element.id == (trunck1Place - num + 40))) { //|| (element.id == trunck2Place - num || element.id == (trunck2Place - num + 20) || element.id == (trunck2Place - num + 40))) { 
             makeMaterial(element, 'trunk', "trunk", "axeId")
