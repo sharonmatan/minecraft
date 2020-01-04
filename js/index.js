@@ -38,9 +38,9 @@ const sort = (num) => {
     fullScreen.forEach(element => {
         if (element.id > 279) {
             makeMaterial(element, 'dert', "dert", "shovelId");
-        } else if ((element.id == trunck1Place - num || element.id == (trunck1Place - num + 20) || element.id == (trunck1Place - num + 40)) || (element.id == trunck2Place - num || element.id == (trunck2Place - num + 20) || element.id == (trunck2Place - num + 40))) {
+        } else if ((element.id == trunck1Place - num || element.id == (trunck1Place - num + 20) || element.id == (trunck1Place - num + 40))) { //|| (element.id == trunck2Place - num || element.id == (trunck2Place - num + 20) || element.id == (trunck2Place - num + 40))) { 
             makeMaterial(element, 'trunk', "trunk", "axeId")
-        } else if (element.id == (trunck1Place - num - 20) || element.id == (trunck1Place - num - 21) || element.id == (trunck1Place - num - 19) || element.id == (trunck1Place - num - 40) || element.id == (trunck1Place - num - 39) || element.id == (trunck1Place - num - 41) || element.id == (trunck2Place - num - 19) || element.id == (trunck2Place - num - 20) || element.id == (trunck2Place - num - 21) || element.id == (trunck2Place - num - 39) || element.id == (trunck2Place - num - 40) || element.id == (trunck2Place - num - 41)) {
+        } else if (element.id == (trunck1Place - num - 20) || element.id == (trunck1Place - num - 21) || element.id == (trunck1Place - num - 19) || element.id == (trunck1Place - num - 40) || element.id == (trunck1Place - num - 39) || element.id == (trunck1Place - num - 41)) { //|| element.id == (trunck2Place - num - 19) || element.id == (trunck2Place - num - 20) || element.id == (trunck2Place - num - 21) || element.id == (trunck2Place - num - 39) || element.id == (trunck2Place - num - 40) || element.id == (trunck2Place - num - 41)) {
             makeMaterial(element, 'tree', "tree", "pickaxeId")
         } else if (element.id == (trunck3Place - 200)) {
             makeMaterial(element, 'cloud', "cloud")
