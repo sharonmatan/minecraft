@@ -130,23 +130,3 @@ body {
 #newGame:hover {
     cursor: pointer;
 }
-
-
-/* .animation {
-  transition: all 1s;
-  transform-style: initial;
-  transform: rotateZ(30deg);
-} */
-
-
-/* .animation {
-  position: fixed;
-  box-sizing: border-box;
-  border-style: solid;
-  border-color: #ffffff;
-  border-radius: 50%;
-  height: 20px;
-  width: 20px;
-  animation: clickEffect 0.4s ease-out;
-  z-index: 99999;
-} */

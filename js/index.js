@@ -5,11 +5,11 @@ for (var i = 0; i < 20; i++) {
     matrix[i] = [];
     for (var j = 0; j < 20; j++) {
         let fullScreen = document.createElement("div");
-        fullScreen.classList.add('fullscreen')
-        fullScreen.addEventListener("click", bank.deploy)
-        fullScreen.id = k
-        k++
-        backGame.appendChild(fullScreen)
+        fullScreen.classList.add('fullscreen');
+        fullScreen.addEventListener("click", bank.deploy);
+        fullScreen.id = k;
+        k++;
+        backGame.appendChild(fullScreen);
         matrix[i][j] = j;
     }
 }
