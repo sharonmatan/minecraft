@@ -1,23 +1,22 @@
-let bank = {}
-bank.dert = 0
-bank.tree = 0
-bank.trunk = 0
-bank.selected = ""
+let bank = {};
+bank.dert = 0;
+bank.tree = 0;
+bank.trunk = 0;
+bank.selected = "";
 bank.deploy = function(e) {
     if (bank.selected == "bankDert" && bank.dert > 0) {
-        makeMaterial(e.target, 'dert', 'dert', 'shovelId')
-        bank.dert--
+        makeMaterial(e.target, "dert", "dert", "shovelId");
+        bank.dert--;
     } else if (bank.selected == "bankTrunk" && bank.trunk > 0) {
-        makeMaterial(e.target, 'trunk', 'trunk', 'axeId')
-        bank.trunk--
-    } else
-    if (bank.selected == "bankTree" && bank.tree > 0) {
-        makeMaterial(e.target, 'tree', 'tree', 'pickaxeId')
-        bank.tree--
+        makeMaterial(e.target, "trunk", "trunk", "axeId");
+        bank.trunk--;
+    } else if (bank.selected == "bankTree" && bank.tree > 0) {
+        makeMaterial(e.target, "tree", "tree", "pickaxeId");
+        bank.tree--;
     }
+};
 
-}
-let bankMaterial = document.querySelectorAll('.elementBank img')
+let bankMaterial = document.querySelectorAll(".elementBank img");
 bankMaterial.forEach(material => {
     material.addEventListener('click', function(e) {
         bank.selected = e.target.classList.value
