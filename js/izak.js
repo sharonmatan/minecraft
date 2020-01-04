@@ -44,9 +44,23 @@ let makeMaterial = (element, material, mClass, tool) => {
     var material = document.createElement("div");
     material.addEventListener("click", (e) => {
         saveRemove(e);
-        moveToBank(e)
+        moveToBank(e);
     })
     material.setAttribute("id", tool)
     material.classList.add(mClass);
     element.appendChild(material)
+}
+
+const removeChild = () => {
+    fullscreen.forEach(element => {
+        element.innerHTML = ""
+    });
+    g++
+    if (trunck1Place - g < 239) {
+        g = 0
+        trunck1Place = 260
+    }
+
+    sort(g)
+
 }

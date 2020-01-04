@@ -20,22 +20,38 @@ let trunck2Place = Math.floor(Math.random() * (258 - 251 + 1)) + 251;
 let trunck3Place = Math.floor(Math.random() * (248 - 241 + 1)) + 241;
 let trunck4Place = Math.floor(Math.random() * (258 - 252 + 1)) + 251;
 
+let hoverDiv = []
+let currnet = 0
+for (let i = 1; i < 81; i++) {
+    hoverDiv.push(currnet)
+    currnet += 20
+    if (i === 20) {
+        currnet = 1
+    } else if (i === 40) {
+        currnet = 18
+    } else if (i === 60) {
+        currnet = 19
+    }
+}
+let g = 0
+const sort = (num) => {
+    fullScreen.forEach(element => {
+        if (element.id > 279) {
+            makeMaterial(element, 'dert', "dert", "shovelId");
+        } else if ((element.id == trunck1Place - num || element.id == (trunck1Place - num + 20) || element.id == (trunck1Place - num + 40)) || (element.id == trunck2Place - num || element.id == (trunck2Place - num + 20) || element.id == (trunck2Place - num + 40))) {
+            makeMaterial(element, 'trunk', "trunk", "axeId")
+        } else if (element.id == (trunck1Place - num - 20) || element.id == (trunck1Place - num - 21) || element.id == (trunck1Place - num - 19) || element.id == (trunck1Place - num - 40) || element.id == (trunck1Place - num - 39) || element.id == (trunck1Place - num - 41) || element.id == (trunck2Place - num - 19) || element.id == (trunck2Place - num - 20) || element.id == (trunck2Place - num - 21) || element.id == (trunck2Place - num - 39) || element.id == (trunck2Place - num - 40) || element.id == (trunck2Place - num - 41)) {
+            makeMaterial(element, 'tree', "tree", "pickaxeId")
+        } else if (element.id == (trunck3Place - 200)) {
+            makeMaterial(element, 'cloud', "cloud")
+        } else if (element.id == (trunck4Place - 200)) {
+            makeMaterial(element, 'cloud', "cloud")
+        } else if (hoverDiv.includes(parseInt(element.id))) {
+            element.addEventListener("click", function() {
+                removeChild()
 
-
-fullScreen.forEach(element => {
-    if (element.id > 279) {
-        makeMaterial(element,'dert',"dert","shovelId");
-    }
-    else if ((element.id == trunck1Place || element.id == (trunck1Place+20) || element.id == (trunck1Place+40)) || (element.id == trunck2Place || element.id == (trunck2Place+20) || element.id == (trunck2Place+40))) {
-        makeMaterial(element,'trunk',"trunk","axeId")
-    }
-    else if (element.id == (trunck1Place-20) || element.id == (trunck1Place-21) || element.id == (trunck1Place-19) || element.id == (trunck1Place-40) || element.id == (trunck1Place-39) || element.id == (trunck1Place-41) || element.id == (trunck2Place-19) || element.id == (trunck2Place-20) || element.id == (trunck2Place-21) || element.id == (trunck2Place-39) || element.id == (trunck2Place-40) || element.id == (trunck2Place-41)) {
-        makeMaterial(element,'tree',"tree","pickaxeId")
-    }
-    else if (element.id == (trunck3Place-200)) {
-        makeMaterial(element,'cloud',"cloud")
-    }
-    else if (element.id == (trunck4Place-200)){
-        makeMaterial(element,'cloud',"cloud")   
-    }
-});
+            })
+        }
+    });
+}
+sort(g)
