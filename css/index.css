@@ -131,6 +131,10 @@ body {
     cursor: pointer;
 }
 
+.move {
+    background-color: red;
+}
+
 
 /* .animation {
   transition: all 1s;

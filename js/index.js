@@ -33,24 +33,28 @@ for (let i = 1; i < 81; i++) {
         currnet = 19
     }
 }
-let g = 0
+let g = 1
 const sort = (num) => {
     fullScreen.forEach(element => {
-        if (element.id > 279) {
+        if (element.id > 319 || 299 < element.id && element.id < 320 || element.id == 294 - num || element.id == 295 - num || element.id == 275 - num) {
             makeMaterial(element, 'dert', "dert", "shovelId");
-        } else if ((element.id == trunck1Place - num || element.id == (trunck1Place - num + 20) || element.id == (trunck1Place - num + 40))) { //|| (element.id == trunck2Place - num || element.id == (trunck2Place - num + 20) || element.id == (trunck2Place - num + 40))) { 
+        } else if ((element.id == 282 - num || element.id == trunck1Place - num || element.id == (trunck1Place - num + 20) || element.id == (trunck1Place - num + 40))) { //|| (element.id == trunck2Place - num || element.id == (trunck2Place - num + 20) || element.id == (trunck2Place - num + 40))) { 
             makeMaterial(element, 'trunk', "trunk", "axeId")
         } else if (element.id == (trunck1Place - num - 20) || element.id == (trunck1Place - num - 21) || element.id == (trunck1Place - num - 19) || element.id == (trunck1Place - num - 40) || element.id == (trunck1Place - num - 39) || element.id == (trunck1Place - num - 41)) { //|| element.id == (trunck2Place - num - 19) || element.id == (trunck2Place - num - 20) || element.id == (trunck2Place - num - 21) || element.id == (trunck2Place - num - 39) || element.id == (trunck2Place - num - 40) || element.id == (trunck2Place - num - 41)) {
             makeMaterial(element, 'tree', "tree", "pickaxeId")
-        } else if (element.id == (trunck3Place - 200)) {
+        } else if (element.id == (trunck3Place - num - 220)) {
             makeMaterial(element, 'cloud', "cloud")
-        } else if (element.id == (trunck4Place - 200)) {
+        } else if (element.id == (trunck4Place - num - 200)) {
             makeMaterial(element, 'cloud', "cloud")
-        } else if (hoverDiv.includes(parseInt(element.id))) {
-            element.addEventListener("click", function() {
-                removeChild()
+        } else if (hoverDiv.includes(parseInt(element.id)) && hoverDiv.indexOf(parseInt(element.id)) == 6 || hoverDiv.indexOf(parseInt(element.id)) == 7 || hoverDiv.indexOf(parseInt(element.id)) == 5) {
+            element.classList.add("move")
+            element.addEventListener("mouseover", removeChild2)
+        } else if (hoverDiv.includes(parseInt(element.id)) && hoverDiv.indexOf(parseInt(element.id)) == 67 || hoverDiv.indexOf(parseInt(element.id)) == 66 || hoverDiv.indexOf(parseInt(element.id)) == 65) {
+            element.classList.add("move")
+            element.addEventListener("mouseover", removeChild)
 
-            })
+
+
         }
     });
 }

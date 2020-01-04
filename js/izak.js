@@ -22,12 +22,14 @@ bankMaterial.forEach(material => {
     material.addEventListener('click', function(e) {
         bank.selected = e.target.classList.value
         backGame.setAttribute("id", `${e.target.classList.value}`)
+        tool = ""
     })
 });
 
 const saveRemove = (e) => {
     if (tool == e.target.id) {
         e.target.style.display = "none";
+
     }
 }
 const moveToBank = (e) => {
@@ -48,7 +50,7 @@ let makeMaterial = (element, material, mClass, tool) => {
     })
     material.setAttribute("id", tool)
     material.classList.add(mClass);
-    element.appendChild(material)
+    element.appendChild(material);
 }
 
 const removeChild = () => {
@@ -56,11 +58,26 @@ const removeChild = () => {
         element.innerHTML = ""
     });
     g++
-    if (trunck1Place - g < 239) {
-        g = 0
-        trunck1Place = 260
-    }
+    if (trunck1Place - g < 240) {
+        return g = 0, trunck1Place = 259, sort(g)
 
+    }
     sort(g)
+
+
+
+}
+const removeChild2 = () => {
+    fullscreen.forEach(element => {
+        element.innerHTML = ""
+    });
+    g--
+    if (trunck1Place - g > 259) {
+        return g = 0, trunck1Place = 240, sort(g)
+
+    }
+    sort(g)
+
+
 
 }
